@@ -1,4 +1,4 @@
-// Default Keybindings of Visual Studio Code 1.118.1 for Linux
+// Default Keybindings of Visual Studio Code 1.119.0 for Linux
   
 [
   { "key": "escape escape",         "command": "workbench.action.exitZenMode",
@@ -1705,7 +1705,8 @@
                                        "when": "workbench.panel.repl.view.active" },
   { "key": "ctrl+c",                "command": "workbench.debug.viewlet.action.copyValue",
                                        "when": "!expressionSelected && focusedView == 'workbench.debug.variablesView' || !expressionSelected && focusedView == 'workbench.debug.watchExpressionsView'" },
-  { "key": "ctrl+k c",              "command": "workbench.files.action.compareWithClipboard" },
+  { "key": "ctrl+k c",              "command": "workbench.files.action.compareWithClipboard",
+                                       "when": "!isSessionsWindow" },
   { "key": "ctrl+k d",              "command": "workbench.files.action.compareWithSaved" },
   { "key": "ctrl+k e",              "command": "workbench.files.action.focusOpenEditorsView",
                                        "when": "workbench.explorer.openEditorsView.active" },
@@ -2028,7 +2029,7 @@
                                        "when": "!inDebugMode && debugConfigurationType == 'node' || !inDebugMode && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && debugConfigurationType == 'pwa-node'" },
   { "key": "ctrl+k ctrl+alt+s",     "command": "git.stageSelectedRanges",
                                        "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'" },
-  { "key": "ctrl+shift+v",          "command": "markdown.showPreview",
+  { "key": "ctrl+k v",              "command": "markdown.showPreviewToSide",
                                        "when": "!notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/" },
   { "key": "shift+alt+f12",         "command": "references-view.findReferences",
                                        "when": "editorHasReferenceProvider" },
@@ -2036,8 +2037,8 @@
                                        "when": "!inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'node' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-extensionHost' || !inDebugMode && activeViewlet == 'workbench.view.debug' && debugConfigurationType == 'pwa-node'" },
   { "key": "ctrl+k ctrl+n",         "command": "git.unstageSelectedRanges",
                                        "when": "editorTextFocus && isInDiffEditor && isInDiffRightEditor && !operationInProgress && resourceScheme == 'git'" },
-  { "key": "ctrl+k v",              "command": "markdown.showPreviewToSide",
-                                       "when": "!notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/" },
+  { "key": "ctrl+shift+v",          "command": "markdown.togglePreview",
+                                       "when": "!notebookEditorFocused && resourceLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/" },
   { "key": "f4",                    "command": "references-view.next",
                                        "when": "reference-list.hasResult && references-view.canNavigate" },
   { "key": "ctrl+k ctrl+r",         "command": "git.revertSelectedRanges",
