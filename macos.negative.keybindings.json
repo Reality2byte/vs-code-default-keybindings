@@ -1,4 +1,4 @@
-// Default Keybindings of Visual Studio Code 1.120.0 for macOS
+// Default Keybindings of Visual Studio Code 1.121.0 for macOS
     
 [
     { "key": "escape escape",         "command": "-workbench.action.exitZenMode",
@@ -758,6 +758,8 @@
                                          "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
     { "key": "ctrl+alt+space",        "command": "-toggleSuggestionFocus",
                                          "when": "suggestWidgetVisible && textInputFocus" },
+    { "key": "shift+tab",             "command": "-jumpToPrevSnippetPlaceholder",
+                                         "when": "hasPrevTabstop && inSnippetChoice && inSnippetMode && textInputFocus" },
     { "key": "enter",                 "command": "-acceptRenameInput",
                                          "when": "editorFocus && renameInputVisible && !isComposing" },
     { "key": "cmd+enter",             "command": "-acceptRenameInputWithPreview",
@@ -1604,9 +1606,9 @@
     { "key": "alt+cmd+right",         "command": "-workbench.action.nextEditor" },
     { "key": "cmd+k alt+cmd+right",   "command": "-workbench.action.nextEditorInGroup" },
     { "key": "shift+cmd+a",           "command": "-workbench.action.openAgentsWindow",
-                                         "when": "config.chat.agent.enabled && !accessibilityModeEnabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isSessionsWindow" },
+                                         "when": "config.chat.agent.enabled && !accessibilityModeEnabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isAuxiliaryWindow && !isSessionsWindow" },
     { "key": "shift+alt+cmd+a",       "command": "-workbench.action.openAgentsWindow",
-                                         "when": "accessibilityModeEnabled && config.chat.agent.enabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isSessionsWindow" },
+                                         "when": "accessibilityModeEnabled && config.chat.agent.enabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isAuxiliaryWindow && !isSessionsWindow" },
     { "key": "cmd+n",                 "command": "-workbench.action.openChat",
                                          "when": "chatIsEnabled && inChat && inChatEditor" },
     { "key": "ctrl+1",                "command": "-workbench.action.openEditorAtIndex1" },

@@ -1,4 +1,4 @@
-// Default Keybindings of Visual Studio Code 1.120.0 for Linux
+// Default Keybindings of Visual Studio Code 1.121.0 for Linux
   
 [
   { "key": "escape escape",         "command": "workbench.action.exitZenMode",
@@ -132,8 +132,6 @@
                                        "when": "chatCursorAtTop && inChatInput && !quickChatHasFocus" },
   { "key": "ctrl+up",               "command": "chat.action.focus",
                                        "when": "inChatInput && isLinux && !quickChatHasFocus || inChatInput && isWindows && !quickChatHasFocus" },
-  { "key": "escape",                "command": "chat.models.action.clearSearchResults",
-                                       "when": "inModelsEditor && inModelsSearch" },
   { "key": "shift+escape",          "command": "closeBreakpointWidget",
                                        "when": "breakpointWidgetVisible && textInputFocus" },
   { "key": "escape",                "command": "closeBreakpointWidget",
@@ -678,6 +676,8 @@
                                        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
   { "key": "ctrl+alt+space",        "command": "toggleSuggestionFocus",
                                        "when": "suggestWidgetVisible && textInputFocus" },
+  { "key": "shift+tab",             "command": "jumpToPrevSnippetPlaceholder",
+                                       "when": "hasPrevTabstop && inSnippetChoice && inSnippetMode && textInputFocus" },
   { "key": "enter",                 "command": "acceptRenameInput",
                                        "when": "editorFocus && renameInputVisible && !isComposing" },
   { "key": "ctrl+enter",            "command": "acceptRenameInputWithPreview",
@@ -1459,9 +1459,9 @@
   { "key": "ctrl+pagedown",         "command": "workbench.action.nextEditor" },
   { "key": "ctrl+k ctrl+pagedown",  "command": "workbench.action.nextEditorInGroup" },
   { "key": "ctrl+shift+a",          "command": "workbench.action.openAgentsWindow",
-                                       "when": "config.chat.agent.enabled && !accessibilityModeEnabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isSessionsWindow" },
+                                       "when": "config.chat.agent.enabled && !accessibilityModeEnabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isAuxiliaryWindow && !isSessionsWindow" },
   { "key": "ctrl+shift+alt+a",      "command": "workbench.action.openAgentsWindow",
-                                       "when": "accessibilityModeEnabled && config.chat.agent.enabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isSessionsWindow" },
+                                       "when": "accessibilityModeEnabled && config.chat.agent.enabled && !chatSetupDisabledInWorkspace && !chatSetupHidden && !isAuxiliaryWindow && !isSessionsWindow" },
   { "key": "ctrl+n",                "command": "workbench.action.openChat",
                                        "when": "chatIsEnabled && inChat && inChatEditor" },
   { "key": "alt+1",                 "command": "workbench.action.openEditorAtIndex1" },
