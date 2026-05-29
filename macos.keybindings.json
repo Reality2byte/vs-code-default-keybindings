@@ -1,4 +1,4 @@
-// Default Keybindings of Visual Studio Code 1.121.0 for macOS
+// Default Keybindings of Visual Studio Code 1.122.0 for macOS
     
 [
     { "key": "escape escape",         "command": "workbench.action.exitZenMode",
@@ -1424,6 +1424,8 @@
                                          "when": "browserElementSelectionActive && browserHasUrl && chatIsEnabled && !browserHasError && activeEditor == 'workbench.editor.browser'" },
     { "key": "cmd+l",                 "command": "workbench.action.browser.focusUrlInput",
                                          "when": "activeEditor == 'workbench.editor.browser'" },
+    { "key": "escape",                "command": "workbench.action.browser.hideEmulationToolbar",
+                                         "when": "browserEmulationToolbarVisible && activeEditor == 'workbench.editor.browser'" },
     { "key": "alt+cmd+/",             "command": "workbench.action.browser.openOrList" },
     { "key": "shift+cmd+a",           "command": "workbench.action.browser.quickOpen",
                                          "when": "activeEditor == 'workbench.editor.browser'" },
@@ -1576,6 +1578,10 @@
                                          "when": "interactivePlaygroundFocus && !editorTextFocus" },
     { "key": "pageup",                "command": "workbench.action.interactivePlayground.pageUp",
                                          "when": "interactivePlaygroundFocus && !editorTextFocus" },
+    { "key": "shift+cmd+s",           "command": "workbench.action.issueReporter.captureScreenshot",
+                                         "when": "issueReporterOpen" },
+    { "key": "shift+cmd+r",           "command": "workbench.action.issueReporter.toggleRecording",
+                                         "when": "issueReporterOpen" },
     { "key": "cmd+k shift+cmd+\\",    "command": "workbench.action.joinEditorInGroup",
                                          "when": "sideBySideEditorActive" },
     { "key": "cmd+k enter",           "command": "workbench.action.keepEditor" },
