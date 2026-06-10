@@ -6,8 +6,8 @@ const { runTests } = require('@vscode/test-electron');
 async function main() {
     try {
         // Make two empty directories to use to launch VS Code with the cleanest possible profile.
-        const emptyDir1 = path.resolve(__dirname, 'empty1');
-        const emptyDir2 = path.resolve(__dirname, 'empty2');
+        const emptyDir1 = path.resolve(__dirname, '../../empty1');
+        const emptyDir2 = path.resolve(__dirname, '../../empty2');
         await fsPromises.mkdir(emptyDir1, { recursive: true });
         await fsPromises.mkdir(emptyDir2, { recursive: true });
 
