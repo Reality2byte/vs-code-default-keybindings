@@ -9,6 +9,6 @@
 		"start": "node ./main.js"
 	},
 	"devDependencies": {
-		"@vscode/test-electron": "^2.4.0"
+		"@vscode/test-electron": "^3.0.0"
 	}
 }
