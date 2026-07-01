@@ -1,4 +1,4 @@
-// Default Keybindings of Visual Studio Code 1.126.0 for Linux
+// Default Keybindings of Visual Studio Code 1.127.0 for Linux
   
 [
   { "key": "escape escape",         "command": "-workbench.action.exitZenMode",
@@ -1713,8 +1713,6 @@
   { "key": "ctrl+numpad0",          "command": "-workbench.action.zoomReset" },
   { "key": "ctrl+shift+m",          "command": "-workbench.actions.view.problems",
                                        "when": "workbench.panel.markers.view.active" },
-  { "key": "escape",                "command": "-workbench.actions.workbench.panel.output.clearFilterText",
-                                       "when": "outputFilterFocus" },
   { "key": "escape",                "command": "-workbench.banner.focusBanner",
                                        "when": "bannerFocused" },
   { "key": "down",                  "command": "-workbench.banner.focusNextAction",
@@ -1830,6 +1828,8 @@
                                        "when": "agentSessionsViewerFocused && !isSessionsWindow" },
   { "key": "ctrl+alt+enter",        "command": "-workbench.action.chat.skipTool",
                                        "when": "chatHasToolConfirmation && inChat" },
+  { "key": "escape",                "command": "-workbench.action.closeModalEditor",
+                                       "when": "editorPartModal && listFocus && !treeFindOpen && !treestickyScrollFocused" },
   { "key": "ctrl+pagedown",         "command": "-workbench.action.debug.nextConsole",
                                        "when": "inDebugRepl" },
   { "key": "ctrl+pageup",           "command": "-workbench.action.debug.prevConsole",
@@ -1952,7 +1952,7 @@
   { "key": "f2",                    "command": "-renameFile",
                                        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
   { "key": "escape",                "command": "-workbench.action.closeModalEditor",
-                                       "when": "editorPartModal && !editorFocus" },
+                                       "when": "editorPartModal && !editorFocus && !listFocus" },
   { "key": "f5",                    "command": "-workbench.action.debug.continue",
                                        "when": "debugState == 'stopped'" },
   { "key": "f11",                   "command": "-workbench.action.debug.stepInto",
